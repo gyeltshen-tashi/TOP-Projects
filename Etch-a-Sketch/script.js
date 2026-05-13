@@ -1,5 +1,10 @@
 const container = document.getElementById("container");
 
+function random() {
+    let randomNum = Math.floor(Math.random() * 256);
+    return randomNum
+}
+
 function buildGrid(gridSize = 16) {
     for (let i = 0; i < gridSize; i++) {
 
@@ -12,7 +17,10 @@ function buildGrid(gridSize = 16) {
             square.classList.add("square");
 
             square.addEventListener("mouseenter", () => {
-                square.classList.add("colored");
+                const r = random();
+                const g = random();
+                const b = random();
+                square.style.backgroundColor = `rgb(${r} ,${g}, ${b})`
             });
 
             row.appendChild(square);
@@ -42,5 +50,6 @@ function changeSquares() {
     container.replaceChildren();
     return buildGrid(parsed);
 }
+
 
 
