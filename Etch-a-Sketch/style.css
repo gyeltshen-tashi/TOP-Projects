@@ -1,0 +1,22 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 320px;
+    border: 2px solid black;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.square {
+    flex: 1;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+}
+
+.colored {
+    background-color: black;
+}
